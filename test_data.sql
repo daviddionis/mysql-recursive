@@ -4,16 +4,16 @@ INSERT INTO courses (id, name) VALUES
     (2, 'MySQL Intermediate Level: Joining, Triggers and Functions'), 
     (3, 'MySQL Advanced Level: Recursive Queries');
 
-INSERT INTO modules (id, name, parent_is_course, parent_course_id, parent_module_id) VALUES 
-    (1, 'Installing MySQL', TRUE, 1, NULL),
-    (2, 'Install Windows', FALSE, NULL, 1),
-    (3, 'Install MacOS', FALSE, NULL, 1),
-    (4, 'Install Apple Intel', FALSE, NULL, 3),
-    (5, 'Install Apple Sillicon', FALSE, NULL, 3),
+INSERT INTO modules (id, name, parent_is_course, parent_course_id, parent_module_id, child_are_modules) VALUES 
+    (1, 'Installing MySQL', TRUE, 1, NULL, FALSE),
+    (2, 'Install Windows', FALSE, NULL, 1, TRUE),
+    (3, 'Install MacOS', FALSE, NULL, 1, FALSE),
+    (4, 'Install Apple Intel', FALSE, NULL, 3, TRUE),
+    (5, 'Install Apple Sillicon', FALSE, NULL, 3, TRUE),
 
-    (6, 'Data Types', TRUE, 1, NULL),
-    (7, 'Numbers', FALSE, NULL, 6),
-    (8, 'Create Table', TRUE, 1, NULL);
+    (6, 'Data Types', TRUE, 1, NULL, FALSE),
+    (7, 'Numbers', FALSE, NULL, 6, TRUE),
+    (8, 'Create Table', TRUE, 1, NULL, TRUE);
 
 INSERT INTO lessons (id, name, parent_module_id) VALUES 
     (1, 'Install Windows: Step 1', 2),
