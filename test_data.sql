@@ -4,7 +4,7 @@ INSERT INTO courses (id, name) VALUES
     (2, 'MySQL Intermediate Level: Joining, Triggers and Functions'), 
     (3, 'MySQL Advanced Level: Recursive Queries');
 
-INSERT INTO modules (id, name, parent_is_course, parent_course_id, parent_module_id, child_are_modules) VALUES 
+INSERT INTO modules (id, name, parent_is_course, parent_course_id, parent_module_id, childs_are_lessons) VALUES 
     (1, 'Installing MySQL', TRUE, 1, NULL, FALSE),
     (2, 'Install Windows', FALSE, NULL, 1, TRUE),
     (3, 'Install MacOS', FALSE, NULL, 1, FALSE),
